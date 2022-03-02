@@ -2,6 +2,19 @@ import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
 
+const Loading = () => {
+  return (
+    <>
+      <Text>
+        로딩중
+      </Text>
+      <Container>
+        <LoadingSpinner/>
+      </Container>
+    </>
+  );
+}
+
 const spin = keyframes`
   to {
     transform:rotate(360deg);
@@ -31,18 +44,5 @@ const LoadingSpinner = styled.div({
   animation:`${spin} 1s linear infinite`,
   margin:'0 auto'
 });
-
-const Loading = () => {
-  return (
-    <>
-      <Text>
-        로딩중
-      </Text>
-      <Container>
-        <LoadingSpinner/>
-      </Container>
-    </>
-  );
-}
 
 export default Loading
